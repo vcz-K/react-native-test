@@ -36,7 +36,9 @@ const gap = (deviceWidth - 240 - 40) / 3;
 export default function Home() {
     return (
         <SafeAreaContainer>
-            <ScreenContainer contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}>
+            <ScreenContainer 
+                contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
+            >
                 <GlingIconWrapper>
                     <GlingIcon />
                 </GlingIconWrapper>

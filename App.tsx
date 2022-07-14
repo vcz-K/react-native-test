@@ -28,6 +28,15 @@ export default function App() {
         screenOptions={{
           tabBarStyle: { // 하단 탭 스타일
             // height: 60,
+            borderTopColor: colors.gray300,
+            borderTopWidth: 3,
+            // elevation: 6,
+            // shadowColor: "gray",
+            // shadowOffset: {
+            //   width: 5,
+            //   height: 5
+            // },
+            // shadowOpacity: 0.9
           },
           tabBarItemStyle: { // 하단 탭 각각의 아이템 스타일
             // marginBottom: 6,
@@ -45,7 +54,7 @@ export default function App() {
             tabBarLabelStyle: { fontSize: 12, fontWeight: "600" },
             tabBarIcon: ({ focused, color, size }) => (
               <SearchIcon color={color} />
-            )
+            ),
           }}
         />
         <Tab.Screen 
