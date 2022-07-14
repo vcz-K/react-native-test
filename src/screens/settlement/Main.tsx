@@ -1,9 +1,13 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
+import SalesContainer from "@/components/settlement/SalesContainer";
+import styled from "styled-components/native";
+import colors from "@/assets/styles/colors";
 
 export default function Main({ navigation }: any) {
     return (
-        <View>
+        <MainContainer>
+            <SalesContainer />
             <Text>Settlement 메인 페이지!</Text>
             <Button 
                 title="Go 대시보드"
@@ -21,6 +25,10 @@ export default function Main({ navigation }: any) {
                 title="Go 포트폴리오"
                 onPress={() => navigation.navigate("Portfolio")}
             />
-        </View>
+        </MainContainer>
     )
 }
+
+const MainContainer = styled.View`
+    background-color: ${colors.white};
+`

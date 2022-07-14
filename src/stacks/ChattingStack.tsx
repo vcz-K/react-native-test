@@ -10,8 +10,8 @@ export default function ChattingStack() {
     return (
         <SafeAreaProvider>
             <Stack.Navigator initialRouteName="Main" screenOptions={{ headerTitleAlign: "center", headerTitleStyle: { fontWeight: "700" }}}>
-                <Stack.Screen name="Main" component={Main} options={{ title: "채팅" }}/>
-                <Stack.Screen name="Room" component={Room} options={{ title: "채팅방 이름" }}/>
+                <Stack.Screen name="Main" component={Main} options={{ title: "채팅", headerShadowVisible: false }}/>
+                <Stack.Screen name="Room" component={Room} options={{ title: "채팅방 이름", headerShadowVisible: false }}/>
             </Stack.Navigator>
         </SafeAreaProvider>
     )

@@ -13,11 +13,11 @@ export default function PublishStack() {
     return (
         <SafeAreaProvider>
             <Stack.Navigator initialRouteName="Main" screenOptions={{ headerTitleAlign: "center", headerTitleStyle: { fontWeight: "700" }}}>
-                <Stack.Screen name="Main" component={Main} options={{ title: "출간" }}/>
-                <Stack.Screen name="Make" component={Make} options={{ title: "책 만들기" }}/>
-                <Stack.Screen name="Write" component={Write} options={{ title: "글쓰기" }}/>
-                <Stack.Screen name="MyBook" component={MyBook} options={{ title: "나의 책" }}/>
-                <Stack.Screen name="Correction" component={Correction} options={{ title: "교정 교열" }}/>
+                <Stack.Screen name="Main" component={Main} options={{ title: "출간", headerShadowVisible: false }}/>
+                <Stack.Screen name="Make" component={Make} options={{ title: "책 만들기", headerShadowVisible: false }}/>
+                <Stack.Screen name="Write" component={Write} options={{ title: "글쓰기", headerShadowVisible: false }}/>
+                <Stack.Screen name="MyBook" component={MyBook} options={{ title: "나의 책", headerShadowVisible: false }}/>
+                <Stack.Screen name="Correction" component={Correction} options={{ title: "교정 교열", headerShadowVisible: false }}/>
             </Stack.Navigator>
         </SafeAreaProvider>
     )

@@ -9,7 +9,7 @@ export default function ChattingStack() {
     return (
         <SafeAreaProvider>
             <Stack.Navigator initialRouteName="Main" screenOptions={{ headerTitleAlign: "center", headerTitleStyle: { fontWeight: "700" }}}>
-                <Stack.Screen name="Main" component={Main} options={{ title: "메뉴" }}/>
+                <Stack.Screen name="Main" component={Main} options={{ title: "메뉴", headerShadowVisible: false }}/>
             </Stack.Navigator>
         </SafeAreaProvider>
     )
