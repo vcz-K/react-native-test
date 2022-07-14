@@ -1,0 +1,14 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="60" height="60" rx="8" fill="white"/>
+<rect x="23" y="15.75" width="17" height="21" fill="white" stroke="#121417"/>
+<line x1="27.5" y1="22.75" x2="35.5" y2="22.75" stroke="#00BCD4"/>
+<line x1="27.5" y1="25.75" x2="35.5" y2="25.75" stroke="#00BCD4"/>
+<line x1="27.5" y1="25.75" x2="35.5" y2="25.75" stroke="#00BCD4"/>
+<line x1="27.5" y1="28.75" x2="35.5" y2="28.75" stroke="#00BCD4"/>
+<rect x="20" y="18.75" width="17" height="21" fill="white" stroke="#121417"/>
+<line x1="24.5" y1="25.75" x2="32.5" y2="25.75" stroke="#00BCD4"/>
+<line x1="24.5" y1="28.75" x2="32.5" y2="28.75" stroke="#00BCD4"/>
+<line x1="24.5" y1="28.75" x2="32.5" y2="28.75" stroke="#00BCD4"/>
+<line x1="24.5" y1="31.75" x2="32.5" y2="31.75" stroke="#00BCD4"/>
+<path d="M25.9281 28.4939L25.9282 28.4941L26.7232 29.9941L26.7232 29.9942L26.7246 29.9967L27.8034 32.0046L27.8046 32.0067L28.0584 32.4846L28.1994 32.75H28.5H43V45.25H17V28.25H25.799L25.9281 28.4939Z" fill="#00BCD4" stroke="#121417"/>
+</svg>
