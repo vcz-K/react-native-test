@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components/native";
 import colors from "@/assets/styles/colors";
-import { Dimensions, View, SafeAreaView } from "react-native";
+import { Dimensions, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import GlingIcon from "@/assets/icons/home/gling.svg";
 import RightArrowIcon from "@/assets/icons/home/rightArrow.svg";
@@ -142,7 +143,6 @@ const GlingIconWrapper = styled.View`
     height: 44px;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
 `
 
 const AlertContainer = styled.View`
