@@ -35,7 +35,7 @@ const gap = (deviceWidth - 240 - 40) / 3;
 
 export default function Home() {
     return (
-        <SafeAreaView>
+        <SafeAreaContainer>
             <ScreenContainer contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}>
                 <GlingIconWrapper>
                     <GlingIcon />
@@ -129,9 +129,13 @@ export default function Home() {
                     </AroundGlingWrapper>
                 </AroundGlingContainer>
             </ScreenContainer>
-        </SafeAreaView>
+        </SafeAreaContainer>
     )
 }
+
+const SafeAreaContainer = styled.SafeAreaView`
+    background-color: ${colors.white};
+`
 
 const ScreenContainer = styled.ScrollView`
     background-color: ${colors.white};
