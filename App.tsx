@@ -27,11 +27,10 @@ export default function App() {
         initialRouteName='Home'
         screenOptions={{
           tabBarStyle: {
-            height: 56,
+            // height: 68,
           },
           tabBarItemStyle: {
-            paddingTop: 7,
-            paddingBottom: 7
+            // marginBottom: 5,
           },
           headerShown: false,
           tabBarActiveTintColor: colors.black
