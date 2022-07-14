@@ -30,7 +30,8 @@ export default function App() {
             height: 56,
           },
           tabBarItemStyle: {
-            marginBottom: 5
+            paddingTop: 7,
+            paddingBottom: 7
           },
           headerShown: false,
           tabBarActiveTintColor: colors.black

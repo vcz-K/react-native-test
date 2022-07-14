@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 import colors from "@/assets/styles/colors";
-import { Dimensions, View } from "react-native";
+import { Dimensions, View, SafeAreaView } from "react-native";
 
 import GlingIcon from "@/assets/icons/home/gling.svg";
 import RightArrowIcon from "@/assets/icons/home/rightArrow.svg";
@@ -34,99 +34,101 @@ const gap = (deviceWidth - 240 - 40) / 3;
 
 export default function Home() {
     return (
-        <ScreenContainer contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}>
-            <GlingIconWrapper>
-                <GlingIcon />
-            </GlingIconWrapper>
+        <SafeAreaView>
+            <ScreenContainer contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}>
+                <GlingIconWrapper>
+                    <GlingIcon />
+                </GlingIconWrapper>
 
-            <AlertContainer>
-                <AlertWrapper>
-                    <AlertText>
-                        글링을 사용하려면 
-                        <HighlightText> 회원가입</HighlightText>
-                        이 필요합니다.
-                    </AlertText>
-                    <RightArrowIcon />
-                </AlertWrapper>
-            </AlertContainer>
+                <AlertContainer>
+                    <AlertWrapper>
+                        <AlertText>
+                            글링을 사용하려면 
+                            <HighlightText> 회원가입</HighlightText>
+                            이 필요합니다.
+                        </AlertText>
+                        <RightArrowIcon />
+                    </AlertWrapper>
+                </AlertContainer>
 
-            <Text2Container>
-                <Text2Wrapper>
-                    <Text2>
-                        <HighlightText>출간</HighlightText>
-                        부터 
-                        <HighlightText> 정산</HighlightText>
-                        까지
-                    </Text2>
-                    <Text2>글링에서 시작해보세요!</Text2>
-                </Text2Wrapper>
-            </Text2Container>
+                <Text2Container>
+                    <Text2Wrapper>
+                        <Text2>
+                            <HighlightText>출간</HighlightText>
+                            부터 
+                            <HighlightText> 정산</HighlightText>
+                            까지
+                        </Text2>
+                        <Text2>글링에서 시작해보세요!</Text2>
+                    </Text2Wrapper>
+                </Text2Container>
 
-            <Text3Container>
-                <Text3Wrapper>
-                    <SubTitleText>지금 필요한 것은 무엇인가요?</SubTitleText>
-                </Text3Wrapper>
-            </Text3Container>
+                <Text3Container>
+                    <Text3Wrapper>
+                        <SubTitleText>지금 필요한 것은 무엇인가요?</SubTitleText>
+                    </Text3Wrapper>
+                </Text3Container>
 
-            <NavIconContainer>
-                {navIconList.map((n, idx) => (
-                    <NavIconWrapper gap={(idx + 1) % 4 !== 0 ? gap : 0} key={idx}>
-                        {n.icon}
-                        <NavIconLabel>{n.label}</NavIconLabel>
-                    </NavIconWrapper>
-                ))}
-            </NavIconContainer>
+                <NavIconContainer>
+                    {navIconList.map((n, idx) => (
+                        <NavIconWrapper gap={(idx + 1) % 4 !== 0 ? gap : 0} key={idx}>
+                            {n.icon}
+                            <NavIconLabel>{n.label}</NavIconLabel>
+                        </NavIconWrapper>
+                    ))}
+                </NavIconContainer>
 
-            <BannerWrapper deviceWidth={deviceWidth}>
-                <View>
-                    <Text4>글링을 처음으로 사용한다면?</Text4>
-                    <Text5>글링 이용 가이드</Text5>
-                </View>
-                <BannerIconWrapper>
-                    <BannerIcon />
-                </BannerIconWrapper>
-            </BannerWrapper>
+                <BannerWrapper deviceWidth={deviceWidth}>
+                    <View>
+                        <Text4>글링을 처음으로 사용한다면?</Text4>
+                        <Text5>글링 이용 가이드</Text5>
+                    </View>
+                    <BannerIconWrapper>
+                        <BannerIcon />
+                    </BannerIconWrapper>
+                </BannerWrapper>
 
-            <PublishContainer>
-                <SubTitleText>혹시 출간 계획이 있으신가요?</SubTitleText>
-                <PublishWrapper>
-                    <PublishLightIcon />
-                    <PublishLabelWrapper>
-                        <Text7>처음부터 끝까지, 내가 만드는 책</Text7>
-                        <Text8>글링 출간 Lite</Text8>
-                    </PublishLabelWrapper>
-                </PublishWrapper>
-                <PublishWrapper>
-                    <PublishBasicIcon />
-                    <PublishLabelWrapper>
-                        <Text7>글링에서 모든 출간 서비스를 맛보세요!</Text7>
-                        <Text8>글링 출간 basic</Text8>
-                    </PublishLabelWrapper>
-                </PublishWrapper>
-            </PublishContainer>
+                <PublishContainer>
+                    <SubTitleText>혹시 출간 계획이 있으신가요?</SubTitleText>
+                    <PublishWrapper>
+                        <PublishLightIcon />
+                        <PublishLabelWrapper>
+                            <Text7>처음부터 끝까지, 내가 만드는 책</Text7>
+                            <Text8>글링 출간 Lite</Text8>
+                        </PublishLabelWrapper>
+                    </PublishWrapper>
+                    <PublishWrapper>
+                        <PublishBasicIcon />
+                        <PublishLabelWrapper>
+                            <Text7>글링에서 모든 출간 서비스를 맛보세요!</Text7>
+                            <Text8>글링 출간 basic</Text8>
+                        </PublishLabelWrapper>
+                    </PublishWrapper>
+                </PublishContainer>
 
-            <AroundGlingContainer>
-                <SubTitleText>글링 기능 둘러보기</SubTitleText>
-                <AroundGlingWrapper horizontal={true}>
-                    <AroundCardWrapper>
-                        <View>
-                            <Text9>글링 정산</Text9>
-                            <Text10>내 데이터 분석,</Text10>
-                            <Text11>대시보드</Text11>
-                        </View>
-                        <AroundDashboardIcon />
-                    </AroundCardWrapper>
-                    <AroundCardWrapper>
-                        <View>
-                            <Text9>글링 정산</Text9>
-                            <Text10>한 눈에 보는,</Text10>
-                            <Text11>정산 조회</Text11>
-                        </View>
-                        <AroundDashboardIcon />
-                    </AroundCardWrapper>
-                </AroundGlingWrapper>
-            </AroundGlingContainer>
-        </ScreenContainer>
+                <AroundGlingContainer>
+                    <SubTitleText>글링 기능 둘러보기</SubTitleText>
+                    <AroundGlingWrapper horizontal={true}>
+                        <AroundCardWrapper>
+                            <View>
+                                <Text9>글링 정산</Text9>
+                                <Text10>내 데이터 분석,</Text10>
+                                <Text11>대시보드</Text11>
+                            </View>
+                            <AroundDashboardIcon />
+                        </AroundCardWrapper>
+                        <AroundCardWrapper>
+                            <View>
+                                <Text9>글링 정산</Text9>
+                                <Text10>한 눈에 보는,</Text10>
+                                <Text11>정산 조회</Text11>
+                            </View>
+                            <AroundDashboardIcon />
+                        </AroundCardWrapper>
+                    </AroundGlingWrapper>
+                </AroundGlingContainer>
+            </ScreenContainer>
+        </SafeAreaView>
     )
 }
 

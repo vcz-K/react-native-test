@@ -20,7 +20,7 @@ const Container = styled.View`
     width: 60px;
     height: 60px;
     background-color: ${colors.blue400};
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border-radius: 50px;
     padding-top: 4px;
 `
