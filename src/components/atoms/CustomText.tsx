@@ -1,42 +1,29 @@
 import React from "react";
 import styled from "styled-components/native";
 
-export default function CustomText(props: any) {
-    let fontFamily = "";
-
-    switch(props.fontWeight) {
+const handleFont = (fontWeight: string) => {
+    switch(fontWeight) {
         case "100":
-            fontFamily = "Spoqa-Han-Sans-Neo-Thin";
-            break;
+        case "200":
+            return "Spoqa-Han-Sans-Neo-Thin";
         case "300":
-            fontFamily = "Spoqa-Han-Sans-Neo-Light";
-            break;
+            return "Spoqa-Han-Sans-Neo-Light";
         case "400":
-            fontFamily = "Spoqa-Han-Sans-Neo-Regular";
-            break;
+            return "Spoqa-Han-Sans-Neo-Regular";
         case "500":
-            fontFamily = "Spoqa-Han-Sans-Neo-Medium";
-            break;
+        case "600":
+            return "Spoqa-Han-Sans-Neo-Medium";
         case "700":
-            fontFamily = "Spoqa-Han-Sans-Neo-Bold";
-            break;
         case "800":
-            fontFamily = "Spoqa-Han-Sans-Neo-Bold";
-            break;
+            return "Spoqa-Han-Sans-Neo-Bold";
         default:
-            fontFamily = "Spoqa-Han-Sans-Neo-Regular";
-            break;
+            return "Spoqa-Han-Sans-Neo-Regular";
     }
-
-    return (
-        <StyledText fontWeight={props.fontWeight} fontFamily={fontFamily}>
-            {props.children}
-        </StyledText>
-    )
 }
 
-const StyledText = styled.Text<{ fontWeight: string; fontFamily: string; }>`
-font-size: 20px;
-    font-family: ${({ fontFamily }: any) => fontFamily};
+const StyledText = styled.Text<{ fontWeight: string; }>`
+    font-family: ${({ fontWeight }: any) => handleFont(fontWeight)};
     font-weight: ${({ fontWeight }: any) => fontWeight};
 `
+
+export default StyledText;

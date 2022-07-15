@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import styled from "styled-components/native";
 import CText from "@/components/atoms/CustomText";
+import colors from "@/assets/styles/colors";
 
 export default function Main({ navigation }: any) {
     return (
@@ -66,5 +67,6 @@ const CustomText = styled.Text<{ fontWeight: string; }>`
 `
 
 const FontText = styled(CText)`
-    font-size: 20px !important;
+    // color: ${colors.blue500};
+    font-size: 20px;
 `
