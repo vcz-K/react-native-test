@@ -1,7 +1,7 @@
 import colors from "@/assets/styles/colors";
 import React, { useState } from "react";
 import { View } from "react-native";
-import CheckBox from "@react-native-community/checkbox";
+import CheckBox from "react-native-bouncy-checkbox";
 import styled from "styled-components/native";
 import SalesIcon from "@/assets/icons/settlement/sales.svg";
 
@@ -43,12 +43,15 @@ export default function SalesContainer() {
                 <View>
                     <Text3>지난달 총 정산금</Text3>
                     <TaxWrapper>
-                        <StyledCheckBox 
-                            value={withTax}
-                            onValueChange={setWithTax}
-                            tintColors={{ true: colors.blue500, false: colors.gray500}}
-                            tintColor={colors.blue500}
-                            boxType="square"
+                        <CheckBox 
+                            isChecked={withTax}
+                            onPress={() => setWithTax(!withTax)}
+                            size={16}
+                            disableText
+                            iconStyle={{
+                                borderRadius: 0,
+                            }}
+                            fillColor={colors.blue500}
                         />
                         <Text5>세액 공제</Text5>
                     </TaxWrapper>
@@ -122,14 +125,8 @@ const TaxWrapper = styled.View`
     height: 21px;
 `
 
-const StyledCheckBox = styled(CheckBox)`
-    position: relative;
-    left: -8px;
-`
-
 const Text5 = styled.Text`
-    position: relative;
-    left: -8px;
+    margin-left: 8px;
     font-size: 12px;
     font-weight: 400;
     color: ${colors.gray600};
