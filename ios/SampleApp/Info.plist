@@ -53,11 +53,11 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Spoqa-Han-Sans-Neo-Bold.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Light.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Medium.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Regular.otf</string>
-		<string>Spoqa-Han-Sans-Neo-Thin.otf</string>
+		<string>SpoqaHanSansNeo-Bold.otf</string>
+		<string>SpoqaHanSansNeo-Light.otf</string>
+		<string>SpoqaHanSansNeo-Medium.otf</string>
+		<string>SpoqaHanSansNeo-Regular.otf</string>
+		<string>SpoqaHanSansNeo-Thin.otf</string>
 	</array>
 </dict>
 </plist>
