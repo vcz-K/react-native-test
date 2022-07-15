@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components/native";
 import colors from "@/assets/styles/colors";
 import { Dimensions, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import GuideBanner from "@/components/common/GuideBanner";
+import AroundGling from "@/components/common/AroundGling";
+import DText from "@/components/atoms/CustomText";
 
 import GlingIcon from "@/assets/icons/home/gling.svg";
 import RightArrowIcon from "@/assets/icons/home/rightArrow.svg";
@@ -14,10 +16,8 @@ import WriteIcon from "@/assets/icons/home/write.svg";
 import CorrectionIcon from "@/assets/icons/home/correction.svg";
 import ReqPublishIcon from "@/assets/icons/home/requestPublish.svg";
 import MarketIcon from "@/assets/icons/home/market.svg";
-import BannerIcon from "@/assets/icons/home/banner.svg";
 import PublishLightIcon from "@/assets/icons/home/publishLight.svg";
 import PublishBasicIcon from "@/assets/icons/home/publishBasic.svg";
-import AroundDashboardIcon from "@/assets/icons/home/aroundDashboard.svg";
 
 const navIconList = [
     { icon: <DashboardIcon />, label: "대시보드" },
@@ -81,15 +81,7 @@ export default function Home() {
                     ))}
                 </NavIconContainer>
 
-                <BannerWrapper deviceWidth={deviceWidth}>
-                    <View>
-                        <Text4>글링을 처음으로 사용한다면?</Text4>
-                        <Text5>글링 이용 가이드</Text5>
-                    </View>
-                    <BannerIconWrapper>
-                        <BannerIcon />
-                    </BannerIconWrapper>
-                </BannerWrapper>
+                <GuideBanner />
 
                 <PublishContainer>
                     <SubTitleText>혹시 출간 계획이 있으신가요?</SubTitleText>
@@ -109,27 +101,7 @@ export default function Home() {
                     </PublishWrapper>
                 </PublishContainer>
 
-                <AroundGlingContainer>
-                    <SubTitleText>글링 기능 둘러보기</SubTitleText>
-                    <AroundGlingWrapper horizontal={true}>
-                        <AroundCardWrapper>
-                            <View>
-                                <Text9>글링 정산</Text9>
-                                <Text10>내 데이터 분석,</Text10>
-                                <Text11>대시보드</Text11>
-                            </View>
-                            <AroundDashboardIcon />
-                        </AroundCardWrapper>
-                        <AroundCardWrapper>
-                            <View>
-                                <Text9>글링 정산</Text9>
-                                <Text10>한 눈에 보는,</Text10>
-                                <Text11>정산 조회</Text11>
-                            </View>
-                            <AroundDashboardIcon />
-                        </AroundCardWrapper>
-                    </AroundGlingWrapper>
-                </AroundGlingContainer>
+                <AroundGling />
             </ScreenContainer>
         </SafeAreaContainer>
     )
@@ -244,34 +216,6 @@ const NavIconLabel = styled.Text`
     color: ${colors.black};
 `
 
-const BannerWrapper = styled.View<{ deviceWidth: number; }>`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 140px;
-    background-color: ${colors.blue50};
-    padding: 0 20px;
-`
-
-const BannerIconWrapper = styled.View`
-    width: 124px;
-`
-
-const Text4 = styled.Text`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${colors.gray600};
-    margin-bottom: 4px;
-`
-
-const Text5 = styled.Text`
-    font-size: 20px;
-    font-weight: 700;
-    color: ${colors.black};
-`
-
 const PublishContainer = styled.View`
     height: 204px;
     padding: 0 20px;
@@ -298,47 +242,4 @@ const Text8 = styled.Text`
     font-size: 16px;
     font-weight: 700;
     color: ${colors.black};
-`
-
-const AroundGlingContainer = styled.View`
-    width: 100%;
-    padding-left: 20px;
-    margin-bottom : 40px;
-`
-
-const AroundGlingWrapper = styled.ScrollView`
-    width: 100%;
-    height: 140px;
-`
-
-const AroundCardWrapper = styled.View`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 240px;
-    height: 100%;
-    border: 1px solid ${colors.gray300};
-    padding: 16px 20px;
-    border-radius: 8px;
-    margin-right: 8px;
-`
-
-const Text9 = styled.Text`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${colors.gray600};
-    margin-bottom: 8px;
-`
-
-const Text10 = styled.Text`
-    font-size: 16px;
-    font-weight: 700;
-    color: ${colors.black};
-`
-
-const Text11 = styled.Text`
-    font-size: 20px;
-    font-weight: 700;
-    color: ${colors.blue500};
 `

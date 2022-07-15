@@ -1,0 +1,81 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/NotoSansKR-Regular.woff",
+      "sha1": "c319520a20e344bd234cd393574cdc408e22f67c"
+    },
+    {
+      "path": "src/assets/fonts/NotoSansKR-Regular.woff2",
+      "sha1": "bf60a7288b77bb56a3ff570a128e294cbf3852d8"
+    },
+    {
+      "path": "src/assets/fonts/NotoSerifKR-Regular.woff",
+      "sha1": "6cba8a277fe55d5d1b11edf2f85b6817914d414d"
+    },
+    {
+      "path": "src/assets/fonts/NotoSerifKR-Regular.woff2",
+      "sha1": "4ec0df97957589fe3ad1a6b5c2008d1ad2f0781e"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Bold.otf",
+      "sha1": "89acdf33ec4c27272923c13607be3b15da981cc3"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Bold.woff",
+      "sha1": "7efd8a85256b69f8d755e8e18683696dad6f8128"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Bold.woff2",
+      "sha1": "d9c7a8828d724c7f60dcdc8b6b56812c6d8b42cf"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Light.otf",
+      "sha1": "ab19b3a96e5128a901e125dee212a2782880b0fb"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Light.woff",
+      "sha1": "a61cd1dfc2c7ba286a2a122d6c94d912edd62552"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Light.woff2",
+      "sha1": "6886fe4a3203bd386bde8793c03bb39ad2c22803"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Medium.otf",
+      "sha1": "ab34324708d01bfcd97fc951775f73999c1cac77"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Medium.woff",
+      "sha1": "8f9994b8fd73c83cab7f0ac08ebe11a99f58b7c7"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Medium.woff2",
+      "sha1": "f64a4a1bfe936a3ef48223d3c32b905547b22270"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Regular.otf",
+      "sha1": "1faeed6b0e8161a4d8ff734df94d69a98cd9fd48"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Regular.woff",
+      "sha1": "603d19e0cec7ece909272b842382140ce6b156c7"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Regular.woff2",
+      "sha1": "39acdfd2f55bfd024367b4afc00cbf6f534d8aee"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Thin.otf",
+      "sha1": "67eebcde04c9217c53ac8f3969d1073b39c49b49"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Thin.woff",
+      "sha1": "7c320a3db65e9084b42f010d7acfed2c1d00de39"
+    },
+    {
+      "path": "src/assets/fonts/Spoqa-Han-Sans-Neo-Thin.woff2",
+      "sha1": "eafa53d6457e310587e016b816f9c72b4fed0485"
+    }
+  ]
+}
