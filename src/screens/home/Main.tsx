@@ -4,7 +4,7 @@ import colors from "@/assets/styles/colors";
 import { Dimensions, View } from "react-native";
 import GuideBanner from "@/components/common/GuideBanner";
 import AroundGling from "@/components/common/AroundGling";
-import DText from "@/components/atoms/CustomText";
+import CustomText from "@/components/atoms/CustomText";
 
 import GlingIcon from "@/assets/icons/home/gling.svg";
 import RightArrowIcon from "@/assets/icons/home/rightArrow.svg";
@@ -45,9 +45,9 @@ export default function Home() {
 
                 <AlertContainer>
                     <AlertWrapper>
-                        <AlertText>
+                        <AlertText fontWeight="400">
                             글링을 사용하려면 
-                            <HighlightText> 회원가입</HighlightText>
+                            <HighlightText fontWeight="700"> 회원가입</HighlightText>
                             이 필요합니다.
                         </AlertText>
                         <RightArrowIcon />
@@ -56,19 +56,19 @@ export default function Home() {
 
                 <Text2Container>
                     <Text2Wrapper>
-                        <Text2>
-                            <HighlightText>출간</HighlightText>
+                        <Text2 fontWeight="400">
+                            <HighlightText fontWeight="700">출간</HighlightText>
                             부터 
-                            <HighlightText> 정산</HighlightText>
+                            <HighlightText fontWeight="700"> 정산</HighlightText>
                             까지
                         </Text2>
-                        <Text2>글링에서 시작해보세요!</Text2>
+                        <Text2 fontWeight="400">글링에서 시작해보세요!</Text2>
                     </Text2Wrapper>
                 </Text2Container>
 
                 <Text3Container>
                     <Text3Wrapper>
-                        <SubTitleText>지금 필요한 것은 무엇인가요?</SubTitleText>
+                        <SubTitleText fontWeight="700">지금 필요한 것은 무엇인가요?</SubTitleText>
                     </Text3Wrapper>
                 </Text3Container>
 
@@ -76,7 +76,7 @@ export default function Home() {
                     {navIconList.map((n, idx) => (
                         <NavIconWrapper gap={(idx + 1) % 4 !== 0 ? gap : 0} key={idx}>
                             {n.icon}
-                            <NavIconLabel>{n.label}</NavIconLabel>
+                            <NavIconLabel fontWeight="700">{n.label}</NavIconLabel>
                         </NavIconWrapper>
                     ))}
                 </NavIconContainer>
@@ -84,19 +84,19 @@ export default function Home() {
                 <GuideBanner />
 
                 <PublishContainer>
-                    <SubTitleText>혹시 출간 계획이 있으신가요?</SubTitleText>
+                    <SubTitleText fontWeight="700">혹시 출간 계획이 있으신가요?</SubTitleText>
                     <PublishWrapper>
                         <PublishLightIcon />
                         <PublishLabelWrapper>
-                            <Text7>처음부터 끝까지, 내가 만드는 책</Text7>
-                            <Text8>글링 출간 Lite</Text8>
+                            <Text7 fontWeight="400">처음부터 끝까지, 내가 만드는 책</Text7>
+                            <Text8 fontWeight="700">글링 출간 Lite</Text8>
                         </PublishLabelWrapper>
                     </PublishWrapper>
                     <PublishWrapper>
                         <PublishBasicIcon />
                         <PublishLabelWrapper>
-                            <Text7>글링에서 모든 출간 서비스를 맛보세요!</Text7>
-                            <Text8>글링 출간 basic</Text8>
+                            <Text7 fontWeight="400">글링에서 모든 출간 서비스를 맛보세요!</Text7>
+                            <Text8 fontWeight="700">글링 출간 basic</Text8>
                         </PublishLabelWrapper>
                     </PublishWrapper>
                 </PublishContainer>
@@ -142,28 +142,25 @@ const AlertWrapper = styled.View`
     border-radius: 99px;
 `
 
-const AlertText = styled.Text`
+const AlertText = styled(CustomText)`
     font-size: 14px;
-    font-weight: 400;
     color: ${colors.black};
 `
 
-const HighlightText = styled.Text`
+const HighlightText = styled(CustomText)`
     color: ${colors.blue500};
     font-weight: 700;
 `
 
-const SubTitleText = styled.Text`
+const SubTitleText = styled(CustomText)`
     font-size: 16px;
-    font-weight: 700;
     color: ${colors.black};
     height: 44px;
     padding: 12px 0;
 `
 
-const Text2 = styled.Text`
+const Text2 = styled(CustomText)`
     font-size: 24px;
-    font-weight: 400;
     color: ${colors.black};
 `
 
@@ -210,9 +207,8 @@ const NavIconWrapper = styled.View<{gap: number}>`
     margin-bottom: 16px;
 `
 
-const NavIconLabel = styled.Text`
+const NavIconLabel = styled(CustomText)`
     font-size: 12px;
-    font-weight: 700;
     color: ${colors.black};
 `
 
@@ -232,14 +228,12 @@ const PublishLabelWrapper = styled.View`
     margin-left: 8px;
 `
 
-const Text7 = styled.Text`
+const Text7 = styled(CustomText)`
     font-size: 12px;
-    font-weight: 400;
     color: ${colors.gray600};
 `
 
-const Text8 = styled.Text`
+const Text8 = styled(CustomText)`
     font-size: 16px;
-    font-weight: 700;
     color: ${colors.black};
 `
