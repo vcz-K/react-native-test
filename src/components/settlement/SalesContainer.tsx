@@ -48,7 +48,7 @@ export default function SalesContainer() {
                             onValueChange={setWithTax}
                             tintColors={{ true: colors.blue500, false: colors.gray500}}
                             tintColor={colors.blue500}
-                            style={{ padding: 0 }}
+                            boxType="square"
                         />
                         <Text5>세액 공제</Text5>
                     </TaxWrapper>

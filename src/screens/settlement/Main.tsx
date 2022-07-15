@@ -23,26 +23,32 @@ const gap = (deviceWidth - 240 - 40) / 3;
 
 export default function Main({ navigation }: any) {
     return (
-        <MainContainer>
-            <SalesContainer />
+        <SafeAreaContainer>
+            <MainContainer>
+                <SalesContainer />
 
-            <NavIconContainer>
-                {navIconList.map((n, idx) => (
-                    <NavIconWrapper gap={(idx + 1) % 4 !== 0 ? gap : 0} key={idx}>
-                        <StyledTouchableOpacity onPress={() => navigation.navigate(n.to)}>
-                            {n.icon}
-                            <NavIconLabel>{n.label}</NavIconLabel>
-                        </StyledTouchableOpacity>
-                    </NavIconWrapper>
-                ))}
-            </NavIconContainer>
+                <NavIconContainer>
+                    {navIconList.map((n, idx) => (
+                        <NavIconWrapper gap={(idx + 1) % 4 !== 0 ? gap : 0} key={idx}>
+                            <StyledTouchableOpacity onPress={() => navigation.navigate(n.to)}>
+                                {n.icon}
+                                <NavIconLabel>{n.label}</NavIconLabel>
+                            </StyledTouchableOpacity>
+                        </NavIconWrapper>
+                    ))}
+                </NavIconContainer>
 
-            <GuideBanner />
+                <GuideBanner />
 
-            <AroundGling />
-        </MainContainer>
+                <AroundGling />
+            </MainContainer>
+        </SafeAreaContainer>
     )
 }
+
+const SafeAreaContainer = styled.SafeAreaView`
+    background-color: ${colors.white};
+`
 
 const MainContainer = styled.ScrollView`
     background-color: ${colors.white};
