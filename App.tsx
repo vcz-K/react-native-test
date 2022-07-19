@@ -13,7 +13,7 @@ import SearchIcon from "@/assets/icons/tabNavi/search.svg";
 import PublishIcon from "@/assets/icons/tabNavi/publish.svg";
 import ChattingIcon from "@/assets/icons/tabNavi/chatting.svg";
 import MenuIcon from "@/assets/icons/tabNavi/menu.svg";
-import HomeIcon from "@/assets/icons/tabNavi/HomeIcon";
+import HomeIcon from "@/assets/icons/tabNavi/home.svg";
 import colors from '@/assets/styles/colors';
 
 const Tab = createBottomTabNavigator();
@@ -64,6 +64,17 @@ export default function App() {
 				}}
 			>
 				<Tab.Screen
+					name="Home"
+					component={HomeStack}
+					options={{
+						title: "홈",
+						tabBarLabelStyle: { fontSize: 12, fontWeight: "600" },
+						tabBarIcon: ({ focused, color, size }) => (
+							<HomeIcon color={color} />
+						)
+					}}
+				/>
+				<Tab.Screen
 					name="Settlement"
 					component={SettlementStack}
 					options={{
@@ -73,13 +84,6 @@ export default function App() {
 					    <SearchIcon color={color} />
 					  ),
 					}}
-					// options={({ route, navigation }) => ({
-					// 	title: "정산",
-					// 	tabBarLabelStyle: { fontSize: 12, fontWeight: "600" },
-					// 	tabBarIcon: ({ focused, color, size }) => (
-					// 		<SearchIcon color={color} />
-					// 	),
-					// })}
 				/>
 				<Tab.Screen
 					name="Publish"
@@ -92,7 +96,7 @@ export default function App() {
 						)
 					}}
 				/>
-				<Tab.Screen
+				{/* <Tab.Screen
 					name="Home"
 					component={HomeStack}
 					options={{
@@ -101,7 +105,7 @@ export default function App() {
 							<HomeIcon />
 						)
 					}}
-				/>
+				/> */}
 				<Tab.Screen
 					name="Chatting"
 					component={ChattingStack}

@@ -12,10 +12,10 @@ import StatementIcon from "@/assets/icons/home/statement.svg";
 import PortfolioIcon from "@/assets/icons/home/portfolio.svg";
 
 const navIconList = [
-    { icon: <DashboardIcon />, label: "대시보드", to: "Dashboard" },
-    { icon: <InquiryIcon />, label: "정산 조회", to: "Inquiry" },
-    { icon: <StatementIcon />, label: "정산서", to: "Statement" },
-    { icon: <PortfolioIcon />, label: "포트폴리오", to: "Portfolio" },
+    { icon: <DashboardIcon />, label: "대시보드", to: "StDashboard" },
+    { icon: <InquiryIcon />, label: "정산 조회", to: "StInquiry" },
+    { icon: <StatementIcon />, label: "정산서", to: "StStatement" },
+    { icon: <PortfolioIcon />, label: "포트폴리오", to: "StPortfolio" },
 ]
 
 const deviceWidth = Dimensions.get("window").width;
